@@ -4,6 +4,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* Đặt màu nền xám cho toàn bộ trang */
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #444444; /* Màu xám */
+      min-height: 100vh;      /* Để luôn chiếm đủ chiều cao màn hình */
+    }
 body {
   background: linear-gradient(135deg, #444444, #444444);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
