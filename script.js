@@ -78,23 +78,45 @@ const orderHistoryContent = document.getElementById("orderHistoryContent");
  * Hàm hiển thị thông báo (toast)
  * type: "success" (mặc định) hay "error"
  ********************************/
+// Giả sử notification là phần tử thông báo
+
 function showNotification(message, type = "success") {
   if (!notification) return;
-  notification.innerHTML = message;
-  notification.classList.remove("hidden", "fade-out");
-  notification.classList.add("fade-in");
+  
+  // Tùy chỉnh icon và màu sắc dựa trên loại thông báo
+  let iconHTML = "";
   if (type === "error") {
-    notification.classList.add("error");
+    iconHTML = '<i class="fa fa-times-circle" aria-hidden="true"></i>';
+    // Màu nền nhạt và chữ cho cảnh báo
+    notification.style.backgroundColor = "#fdecea"; // nền đỏ nhạt
+    notification.style.color = "#d93025"; // chữ đỏ
   } else {
-    notification.classList.remove("error");
+    iconHTML = '<i class="fa fa-check-circle" aria-hidden="true"></i>';
+    // Màu nền nhạt và chữ cho thành công
+    notification.style.backgroundColor = "#e6f4ea"; // nền xanh nhạt
+    notification.style.color = "#34a853"; // chữ xanh lá
   }
+  
+  // Ghép icon và nội dung thông báo
+  notification.innerHTML = `<span class="icon">${iconHTML}</span><span class="message">${message}</span>`;
+  
+  // Loại bỏ các lớp ẩn và fade-out, thêm hiệu ứng fade-in
+  notification.classList.remove("hidden", "fade-out");
+  // Khởi tạo lại hiệu ứng (nếu cần)
+  void notification.offsetWidth;
+  notification.classList.add("fade-in");
+  
+  // Sau 2 giây, chuyển sang fade-out
   setTimeout(() => {
+    notification.classList.remove("fade-in");
     notification.classList.add("fade-out");
-  }, 2000);
+  }, 4000);
+  
+  // Sau 3 giây, ẩn thông báo và xóa các lớp hiệu ứng
   setTimeout(() => {
     notification.classList.add("hidden");
-    notification.classList.remove("fade-in", "fade-out");
-  }, 3000);
+    notification.classList.remove("fade-out");
+  }, 6000);
 }
 
 /********************************
@@ -503,3 +525,17 @@ packageSelect.addEventListener("change", () => {
     chosenText.textContent = "Chưa chọn";
   }
 });
+
+
+    window.addEventListener('load', function() {
+      var audio = document.getElementById('audioPlayer');
+      
+      audio.play().catch(function(error) {
+        console.log("Không thể tự động phát nhạc: ", error);
+      });
+    });
+
+
+
+
+// Cảnh Báo 

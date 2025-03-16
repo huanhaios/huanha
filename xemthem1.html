@@ -3,20 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Huanha.com</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
- <link rel="icon" type="image/png" sizes="32x32" href="https://i.imgur.com/OutXhHO.jpeg">
-
-<!-- Favicon cho iOS (Apple devices) -->
-<link rel="apple-touch-icon" sizes="180x180" href="https://i.imgur.com/OutXhHO.jpeg">
-
-<!-- Favicon dạng SVG cho Safari -->
-<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+  <title>TRUMAIMBOT.XYZ</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="https://i.imgur.com/OutXhHO.jpeg">
 
 <!-- Cấu hình hiển thị cho Windows -->
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
-  <link rel="stylesheet" href="style.css" />
+<meta name="msapplication-TileColor" content="#000">
+<meta name="theme-color" content="#000">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
   <!-- Firebase JS (compat) -->
   <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth-compat.js"></script>
@@ -42,11 +36,12 @@
       <button id="btnShowLogin" class="btn-auth">Đăng Nhập</button>
       <button id="btnShowRegister" class="btn-auth">Đăng Ký</button>
       <div id="loggedInMenu" class="logged-in-menu hidden">
+<i class="fa fa-user"></i>
         <span id="displayName">Username</span>
         <span class="balance-label">Số Dư: <strong id="userBalance">0</strong>đ</span>
         <img id="arrowIcon" src="https://cdn-icons-png.flaticon.com/512/892/892498.png" alt="Arrow" class="arrow-icon"/>
         <div id="dropdownMenu" class="dropdown-menu hidden">
-          <a href="#">Thông Tin Tài Khoản</a>
+          <a href="info.html">Thông Tin Tài Khoản</a>
           <hr/>
           <a href="#" id="btnLogout">Đăng Xuất</a>
         </div>
@@ -54,40 +49,177 @@
     </div>
   </header>
 
-  <!-- SIDEBAR -->
-  <div id="sidebar" class="sidebar hidden">
-    <div class="sidebar-header">
-      
-      <button id="btnCloseSidebar" class="btn-close-sidebar">X</button>
-    </div>
-    <ul>
-      <li><button id="btnNapBank">Nạp Bank</button></li>
-      <li><button id="btnNapTheCao">Nạp Thẻ Cào</button></li>
-      <li><button id="btnOrderHistory">Lịch sử mua hàng</button></li>
-    </ul>
+  <!-- SIDEBAR (Menu 3 gạch) -->
+<div id="sidebar" class="sidebar">
+  <div class="sidebar-header">
+    <button id="btnCloseSidebar" class="btn-close-sidebar">&times;</button>
   </div>
+  <ul>
+    <li><button id="btnNapBank" class="sidebar-btn">Nạp Bank</button></li>
+    <li><button id="btnNapTheCao" class="sidebar-btn">Nạp Thẻ Cào</button></li>
+    <li><button id="btnOrderHistory" class="sidebar-btn">Lịch sử mua hàng</button></li>
+  </ul>
+</div>
 
   <!-- Sản Phẩm Thêm -->
   <section class="category-section">
-    <h2>PANEL ANTIBAND</h2>
+    <h2>PERIUM V2</h2>
 <div class="separator-yellow"></div>
     <div class="category-content">
-      <div class="banner-item">
-        <img src="https://i.imgur.com/oVfzA0u.jpeg" alt="Liên Quân" />
-        <p class="desc">NHẸ TÂM GHIM ĐẦU</p>
-<!-- Select box -->
-    <div class="select-box">
-      <select id="packageSelect">
-        <option value="">Chọn Gói</option>
-        <option value="200k/1ob">250K/1ob</option>
-      </select>
-    </div>
+     <div class="banner-item">
+  <!-- Ảnh sản phẩm -->
+<!-- Khu vực logo nhỏ gọn -->
+  <div class="helo-container">
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTYyebYEGSXXFk6qeLCIl7qTFcqYQKZSRg7w&s" 
+      alt="Logo"
+      class="helo-img"
+    />
+  </div>
 
-    <!-- Hiển thị gói đã chọn (tùy ý) -->
-   
- <button class="buy-now-btn green-buy" onclick="handleBuyNowWrapper(event)" data-price="250000" data-product="PANEL IOSXIT 250K" data-download="https://fnote.org/notes/qW6d6d"><i class="fa-solid fa-cart-shopping"></i>Mua Ngay</button>
+  <!-- Tiêu đề hoặc mô tả chính có icon check phía sau -->
+  <p class="desc-with-check">
+    AIMBOT HESOT 90%
+  </p>
 
-   </div>    
+  <!-- Danh sách bullet có icon check xanh -->
+  <ul class="feature-list">
+    <li>Hỗ trợ tất cả phiên bản iOS</li>
+    <li>Kéo nhẹ full đỏ</li>
+    <li>Antiban safe</li>
+    <li>No Vpn</li>
+  </ul>
+
+  <!-- Giá, giảm giá, v.v. (tuỳ ý) -->
+  <div class="price-box">
+    <span class="old-price">350.000đ</span>
+    <span class="new-price">250.000đ</span>
+  </div>
+
+  <!-- Select box -->
+  <div class="select-box">
+    <select id="packageSelect">
+      <option value="">Chọn Gói</option>
+      <option value="200k/1ob">250K/1ob</option>
+    </select>
+  </div>
+
+  <!-- Nút Mua Ngay -->
+  <button
+    class="buy-now-btn"
+    onclick="handleBuyNowWrapper(event)"
+    data-price="250000"
+    data-product=" AIMBOT GHIM ĐẦU 90%"
+    data-download="https://fnote.org/notes/qA5bvZ"
+  >
+    <i class="fa-solid fa-cart-shopping"></i>
+    Mua Ngay
+  </button>
+</div>
+  
+<!-->
+  <div class="banner-item">
+  <!-- Ảnh sản phẩm -->
+<!-- Khu vực logo nhỏ gọn -->
+  <div class="helo-container">
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTYyebYEGSXXFk6qeLCIl7qTFcqYQKZSRg7w&s" 
+      alt="Logo"
+      class="helo-img"
+    />
+  </div>
+
+  <!-- Tiêu đề hoặc mô tả chính có icon check phía sau -->
+  <p class="desc-with-check">
+    ĐẠN MA THUẬT
+  </p>
+
+  <!-- Danh sách bullet có icon check xanh -->
+  <ul class="feature-list">
+    <li>Hỗ trợ tất cả phiên bản iOS</li>
+    <li>Bắn Xuyên Tường </li>
+    <li>Hesot Bụng</li>
+    <li>Antiband Safe</li>
+    <li>No VPn</li>
+  </ul>
+
+  <!-- Giá, giảm giá, v.v. (tuỳ ý) -->
+  <div class="price-box">
+    <span class="old-price">200.000đ</span>
+    <span class="new-price">170.000đ</span>
+  </div>
+
+  <!-- Select box -->
+  <div class="select-box">
+    <select id="packageSelect">
+      <option value="">Chọn Gói</option>
+      <option value="200k/1ob">170K/1ob</option>
+    </select>
+  </div>
+
+  <!-- Nút Mua Ngay -->
+  <button
+    class="buy-now-btn"
+    onclick="handleBuyNowWrapper(event)"
+    data-price="170000"
+    data-product=" ĐẠN MA THUẬT - BẮN XUYÊN TƯỜNG "
+    data-download="https://fnote.net/notes/bS93hD"
+  >
+    <i class="fa-solid fa-cart-shopping"></i>
+    Mua Ngay
+  </button>
+</div>
+
+  <div class="banner-item">
+  <!-- Ảnh sản phẩm -->
+<!-- Khu vực logo nhỏ gọn -->
+  <div class="helo-container">
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTYyebYEGSXXFk6qeLCIl7qTFcqYQKZSRg7w&s" 
+      alt="Logo"
+      class="helo-img"
+    />
+  </div>
+
+  <!-- Tiêu đề hoặc mô tả chính có icon check phía sau -->
+  <p class="desc-with-check">
+    AIMBOT BODY 100% 
+  </p>
+
+  <!-- Danh sách bullet có icon check xanh -->
+  <ul class="feature-list">
+    <li>Hỗ trợ tất cả phiên bản iOS</li>
+    <li>Hesot Bụng 100%</li>
+    <li>Antiband Safe</li>
+    <li>No VPn</li>
+  </ul>
+
+  <!-- Giá, giảm giá, v.v. (tuỳ ý) -->
+  <div class="price-box">
+    <span class="old-price">100.000đ</span>
+    <span class="new-price">80.000đ</span>
+  </div>
+
+  <!-- Select box -->
+  <div class="select-box">
+    <select id="packageSelect">
+      <option value="">Chọn Gói</option>
+      <option value="200k/1ob">80K/1ob</option>
+    </select>
+  </div>
+
+  <!-- Nút Mua Ngay -->
+  <button
+    class="buy-now-btn"
+    onclick="handleBuyNowWrapper(event)"
+    data-price="80000"
+    data-product=" AIMBOT BODY 100%"
+    data-download="https://fnote.net/notes/k7bzNw"
+  >
+    <i class="fa-solid fa-cart-shopping"></i>
+    Mua Ngay
+  </button>
+</div>
 
 </div>
    
@@ -120,69 +252,137 @@
     </div>
   </div>
   <!-- Modal Nạp Bank -->
-  <div id="napBankModal" class="modal hidden">
-    <div class="modal-content">
-      <span class="close" id="closeNapBankModal">&times;</span>
-      <h2>Nạp Bank</h2>
-      <p>Ngân hàng: Mbbank</p>
-      <p>Số tài khoản: 0325575642</p>
-      <p>Chủ TK: HA VAN HUAN</p>
-      <hr/>
-      <input type="number" id="bankAmount" placeholder="Số tiền muốn nạp (VNĐ)" />
-      <p>Nội dung chuyển khoản: <span id="bankNote"></span></p>
-      <button id="btnSubmitBank">Xác Nhận Đã Chuyển</button>
-      <p style="font-size:0.9rem; color:#555;">(Sau khi Admin kiểm tra, số dư sẽ được cộng)</p>
-    </div>
-  </div>
-  <!-- Modal Nạp Thẻ Cào -->
-  <div id="napTheModal" class="modal hidden">
-    <div class="modal-content">
-      <span class="close" id="closeNapTheModal">&times;</span>
-      <h2>Nạp Thẻ Cào</h2>
-      <input type="number" id="cardAmount" placeholder="Số tiền muốn nạp (VNĐ)" />
-      <input type="text" id="cardType" placeholder="Loại thẻ (Viettel, Vina...)" />
-      <input type="text" id="cardSerial" placeholder="Mã seri" />
-      <input type="text" id="cardCode" placeholder="Mã thẻ" />
-      <button id="btnSubmitCard">Xác Nhận</button>
-      <p style="font-size:0.9rem; color:#555;">(Sau khi Admin duyệt, số dư sẽ được cộng)</p>
-    </div>
-  </div>
-  <div id="orderHistoryModal" class="modal hidden">
+<div id="napBankModal" class="modal hidden">
   <div class="modal-content">
-    <span class="close" id="closeOrderHistoryModal">&times;</span>
-    <h2>Lịch sử mua hàng</h2>
-    
-    <!-- Thêm 1 thẻ bao bọc cho danh sách đơn hàng -->
-    <div id="orderHistoryContainer" class="order-history-container">
-      <div id="orderHistoryContent"></div>
+    <span class="close" id="closeNapBankModal">&times;</span>
+    <div class="modal-header">
+      <!-- Logo ngân hàng, thay đổi src theo logo của bạn -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Logo_MB_new.png/1200px-Logo_MB_new.png" alt="MBBank Logo" class="bank-logo">
+     
     </div>
-    
+    <div class="bank-info">
+      <div class="info-item">
+        <label>Ngân hàng:</label>
+        <span class="readonly-text">MBBank</span>
+      </div>
+      <div class="info-item">
+        <label>Số tài khoản:</label>
+        <span class="readonly-text">0325575642</span>
+      </div>
+      <div class="info-item">
+        <label>Chủ TK:</label>
+        <span class="readonly-text">HA VAN HUAN</span>
+      </div>
+    </div>
+    <hr>
+    <div class="input-group">
+      <input type="number" id="bankAmount" placeholder="VD: 100,000 VNĐ">
+    </div>
+    <div class="transfer-note">
+      <p>Nội dung chuyển khoản: <span id="bankNote"></span></p>
+    </div>
+    <button id="btnSubmitBank" class="submit-btn">Xác Nhận Đã Chuyển</button>
+    <p class="info-note">(Sau khi Admin kiểm tra giao dịch, số dư sẽ được cộng)</p>
   </div>
 </div>
-<!-- Footer liên hệ -->
-<footer class="footer-contact">
-  <div class="footer-content">
-    <h3 class="footer-title">HUANHA.COM</h3>
-    <p class="footer-desc">Hệ thống bán Aim - Regedit đảm bảo uy tín và chất lượng</p>
-    
-    <!-- Nút chat (ví dụ Messenger link) -->
-    <!-- Bạn cần thay href bằng link Messenger thực tế của bạn -->
-    <a href="https://t.me/suporthuanha" class="chat-button" target="_blank">
-      <!-- Icon Font Awesome, ví dụ: fa-brands fa-facebook-messenger -->
-      <i class="fa-brands fa-facebook-messenger"></i>
-      Chat với chúng tôi
-    </a>
-    
-    <!-- Dòng bản quyền -->
-    <p class="footer-copyright">
-      &copy; 2025 <span class="brand-name">huanha.com</span><br>
-      Website Được Thiết Kế - Vận Hành Bởi <strong>suporthuanha</strong>
-    </p>
+
+<!-- Modal Nạp Thẻ Cào -->
+<div id="napTheModal" class="modal hidden">
+  <div class="modal-content">
+    <span class="close" id="closeNapTheModal">&times;</span>
+    <div class="modal-header">
+      <!-- Icon từ Font Awesome -->
+      <i class="fas fa-credit-card modal-icon"></i>
+    </div>
+    <div class="card-info">
+      <div class="input-group">
+        <input type="number" id="cardAmount" placeholder="Số tiền muốn nạp (VNĐ)">
+      </div>
+      <div class="input-group">
+        <input type="text" id="cardType" placeholder="Loại thẻ (Viettel, Vina...)">
+      </div>
+      <div class="input-group">
+        <input type="text" id="cardSerial" placeholder="Mã seri">
+      </div>
+      <div class="input-group">
+        <input type="text" id="cardCode" placeholder="Mã thẻ">
+      </div>
+    </div>
+    <button id="btnSubmitCard" class="submit-btn">Xác Nhận</button>
+    <p class="info-note">(Sau khi Admin duyệt, số dư sẽ được cộng)</p>
   </div>
-</footer>
+</div>
+
+ <!-- Modal Lịch sử mua hàng -->
+<div id="orderHistoryModal" class="modal hidden">
+  <div class="modal-content order-modal-content">
+    <span class="close" id="closeOrderHistoryModal">&times;</span>
+    <div class="order-modal-header">
+      <div class="animated-icon">
+        <i class="fas fa-exclamation"></i>
+      </div>
+      <h2><i class="fas fa-history"></i> Lịch sử mua hàng</h2>
+    </div>
+    <!-- Container chứa danh sách đơn hàng -->
+    <div id="orderHistoryContainer" class="order-history-container">
+      <div id="orderHistoryContent" class="order-history-content">
+        <!-- Mẫu một đơn hàng -->
+        <div class="order-item">
+          <div class="order-icon">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+          <div class="order-details">
+            <p class="order-date">12/03/2025</p>
+            <p class="order-info">Đơn hàng #12345 - Thành công</p>
+          </div>
+        </div>
+        <!-- Bạn có thể thêm nhiều đơn hàng khác -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Phần kết trang -->
+  <section class="footer-iguidecheat">
+    <!-- Tiêu đề giới thiệu -->
+    <h2 class="footer-title">GIỚI THIỆU TRUMAIMBOT</h2>
+    <p class="footer-desc">
+      Trumaimbot.online là nền tảng hàng đầu cung cấp các công cụ và mod trò chơi,
+      giúp bạn trải nghiệm những game một cách dễ dàng và an toàn. Chúng tôi
+      hiểu rằng mỗi người có một cách chơi khác nhau, vì vậy chúng tôi luôn
+      tập trung vào việc đem lại sự hỗ trợ tốt nhất. Hãy truy cập thường xuyên
+      để cập nhật những bản hack và mod an toàn, giúp bạn tối ưu trải nghiệm
+      với mức độ an toàn cao nhất.
+    </p>
+    
+    <!-- Kết nối với chúng tôi -->
+    <h3 class="footer-subtitle">KẾT NỐI VỚI CHÚNG TÔI</h3>
+    <div class="footer-buttons">
+      <!-- Nút channel telegram -->
+      <a href="https://t.me/suporthuanhavn" class="btn-telegram-blue">
+        <i class="fa-brands fa-telegram"></i>
+        Channel Telegram
+      </a>
+      <!-- Nút group chat telegram -->
+      <a href="https://t.me/huanhasuport" class="btn-telegram-green">
+        <i class="fa-brands fa-telegram"></i>
+        Group Chat Telegram
+      </a>
+    </div>
+    
+    <!-- Điều khoản -->
+    <h3 class="footer-subtitle">ĐIỀU KHOẢN</h3>
+    <p class="footer-terms">Điều khoản sử dụng</p>
+$ Vui Lòng Chấp Hành Các Quy Định Của Website Của Chúng Tôi
+  </section>
+
 
   <!-- Toast Notification -->
   <div id="notification" class="notification hidden"></div>
-
+<script>
+// Ví dụ mở sidebar khi nhấn nút hamburger (nếu có):
+document.getElementById('hamburgerBtn').addEventListener('click', function() {
+  document.getElementById('sidebar').classList.add('active');
+});
+</script>
 </body>
 </html>
